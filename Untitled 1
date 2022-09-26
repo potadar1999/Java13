@@ -1,0 +1,19 @@
+package com.queA;
+
+public interface A {
+	int i = 111;
+
+}
+
+package com.queA;
+
+public class B implements A {
+	void methodB(){
+		i = 222;
+		}
+
+}
+
+
+//NO complile not run successfully because 
+//A.i cannot be assigned in the B we want override the method in interface method

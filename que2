@@ -1,0 +1,50 @@
+Briefly explain the difference between Early and Late Binding with examples
+
+the process of using the class information to resolve method calling that occurs at compile time is called Early Binding
+the process of using the object to resolve method calling that occurs at run time is called Late Binding
+Early Binding happens at compile time.
+Late Binding happens at run time.
+Early binding is know as Static Binding.
+Late binding is know as Dynamic Binding.
+Overriding method are bonded using early binding.
+Overridden methods are bonded using late binding.
+
+Example:
+
+Class Student{
+  void Name(){
+  System.out.println("Names");
+  }
+  
+  static void Classes(){
+  System.out.println("Classes");
+  }
+}
+
+class Marks extends Student{
+
+@Override
+	void Name() {
+		System.out.println("Nam");
+		
+	}
+	
+	  static void Classes(){
+  System.out.println("Varga");
+  }
+
+
+}
+
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Student S1=new Marks();
+		Student.Name();
+		Student.Classes();
+		
+	}
+
+}
